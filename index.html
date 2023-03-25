@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.6/sweetalert2.css"
+        integrity="sha512-fSWkjL6trYj6KvdwIga30e8V4h9dgeLxTF2q2waiwwafEXD+GXo5LmPw7jmrSDqRun9gW5KBR+DjvWD+5TVr8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error {
+            background-color: #f8d7da;
+            display: none;
+            margin-top: -9px;
+            width: 416px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="add-course">
+        <div class="container">
+            <h1>CRUD System</h1>
+            <label for="courseName">course name</label>
+            <input class="input" type="text" placeholder="cource name" id="courseName">
+            <div class="error">please start with capital letter</div>
+            <label for="courseCategory">course category</label>
+            <input class="input" type="text" placeholder="cource category" id="courseCategory">
+            <label for="coursePrice">course price</label>
+            <input class="input" type="number" placeholder="cource price" id="coursePrice">
+            <label for="courseDescription">course description</label>
+            <textarea class="input" id="courseDescription" placeholder="course description"></textarea>
+            <button id="click" onclick="createCourse()">Add Cource</button>
+            <button onclick="clearInput()">clear</button>
+            <!-- <button id="updatebutton">Update</button> -->
+        </div>
+        <input type="search" onkeyup="searchCourse()" placeholder="search... " id="search">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>name</th>
+                    <th>category</th>
+                    <th>price</th>
+                    <th>description</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.6/sweetalert2.min.js"
+        integrity="sha512-DyFdigPSyUbsT1ioYelAc+l6T6s2QB9OZv48jBpr589vTJWRmclLAl1sOZ560bOhwwi9Aewr/VrcPLiTXM5W/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+
+
+
+</body>
+
+</html>
